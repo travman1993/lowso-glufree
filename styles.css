@@ -105,209 +105,81 @@ body {
     min-height: 100vh;
 }
 
-.backlinks-section {
-    background: linear-gradient(135deg, #f8f8f8 0%, #fafafa 100%);
-    padding: 64px 16px;
-    margin: 64px 0;
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
-    border-radius: 10px;
+.dhh-footer-widget {
+    background: linear-gradient(135deg, #1a1f2e 0%, #2d3748 100%);
+    border-top: 3px solid #4299e1;
+    padding: 24px 20px;
+    margin-top: 48px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-.backlinks-container {
+.dhh-footer-content {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.backlinks-title {
-    text-align: center;
-    font-size: 32px;
+.dhh-footer-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.dhh-footer-title {
+    color: #ffffff;
+    font-size: 18px;
     font-weight: 700;
-    color: #2d4f44;
-    margin-bottom: 12px;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
 }
 
-.backlinks-subtitle {
-    text-align: center;
-    font-size: 16px;
-    color: #666666;
-    margin-bottom: 48px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.dhh-footer-subtitle {
+    color: #cbd5e0;
+    font-size: 14px;
+    margin: 0;
     line-height: 1.6;
 }
 
-.backlinks-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    margin-bottom: 48px;
-}
-
-@media (min-width: 768px) {
-    .backlinks-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.backlink-card {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 32px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    position: relative;
-    overflow: hidden;
-}
-
-.backlink-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #4a7c6d 0%, #6fa394 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.backlink-card.fitness::before {
-    background: linear-gradient(90deg, #d4907b 0%, #e8b5a0 100%);
-}
-
-.backlink-card.spiritual::before {
-    background: linear-gradient(90deg, #4a7c6d 0%, #6fa394 100%);
-}
-
-.backlink-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-    border-color: #4a7c6d;
-}
-
-.backlink-card:hover::before {
-    opacity: 1;
-}
-
-.backlink-icon {
-    font-size: 48px;
-    margin-bottom: 16px;
-    display: block;
-}
-
-.backlink-card h4 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #2d4f44;
-    margin-bottom: 12px;
-    margin-top: 0;
-}
-
-.backlink-card p {
-    font-size: 15px;
-    color: #666666;
-    line-height: 1.7;
-    margin-bottom: 24px;
-}
-
-.backlink-button {
+.dhh-footer-cta {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
-    background: #4a7c6d;
+    background-color: #4299e1;
     color: #ffffff;
+    text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
     font-size: 15px;
     transition: all 0.3s ease;
-    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
 }
 
-.backlink-card.fitness .backlink-button {
-    background: #d4907b;
+.dhh-footer-cta:hover {
+    background-color: #3182ce;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(66, 153, 225, 0.4);
+    color: #ffffff;
 }
 
-.backlink-card.fitness .backlink-button:hover {
-    background: #c67860;
+.dhh-footer-cta svg {
+    width: 16px;
+    height: 16px;
 }
 
-.backlink-card.spiritual .backlink-button {
-    background: #4a7c6d;
-}
-
-.backlink-card.spiritual .backlink-button:hover {
-    background: #2d4f44;
-}
-
-.backlink-button:hover {
-    transform: translateX(4px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.arrow {
-    transition: transform 0.3s ease;
-    display: inline-block;
-}
-
-.backlink-button:hover .arrow {
-    transform: translateX(4px);
-}
-
-.wellness-message {
-    background: #f0f4f2;
-    border-left: 4px solid #4a7c6d;
-    padding: 24px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.wellness-message p {
-    font-size: 16px;
-    color: #2d4f44;
-    margin-bottom: 0;
-    line-height: 1.7;
-    font-weight: 500;
-}
-
-/* Mobile Optimization */
-@media (max-width: 767px) {
-    .backlinks-section {
-        padding: 48px 16px;
-        margin: 48px 0;
+/* Mobile responsive */
+@media (max-width: 640px) {
+    .dhh-footer-content {
+        flex-direction: column;
+        text-align: center;
     }
-
-    .backlinks-title {
-        font-size: 24px;
-    }
-
-    .backlinks-subtitle {
-        font-size: 14px;
-        margin-bottom: 32px;
-    }
-
-    .backlinks-grid {
-        gap: 24px;
-    }
-
-    .backlink-card {
-        padding: 24px;
-    }
-
-    .backlink-icon {
-        font-size: 42px;
-        margin-bottom: 12px;
-    }
-
-    .backlink-card h4 {
-        font-size: 18px;
-    }
-
-    .wellness-message p {
-        font-size: 14px;
+    
+    .dhh-footer-cta {
+        width: 100%;
+        justify-content: center;
     }
 }
 
